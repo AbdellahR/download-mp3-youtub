@@ -42,7 +42,8 @@ const Download = () => {
   const handleDownload = async () => {
     setDownloading(true);
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:5000/download?url=${encodeURIComponent(url)}&format=${format}`, true);
+    // xhr.open('GET', `http://localhost:5000/download?url=${encodeURIComponent(url)}&format=${format}`, true);
+    xhr.open('GET', `https://download-youtub-back-v1.onrender.com/download?url=${encodeURIComponent(url)}&format=${format}`, true);
     xhr.responseType = 'blob';
 
     xhr.onload = () => {
